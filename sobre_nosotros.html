@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sobre Nosotros — IncognitoTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <!-- styles.css trae navbar, footer, botones y variables compartidas -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- sobre-nosotros.css solo tiene los estilos exclusivos de esta página -->
+  <link rel="stylesheet" href="sobre-nosotros.css" />
+</head>
+<body>
+
+  <!-- ═══ TOPBAR ═══ -->
+  <div class="topbar">
+    <span>🚀 Envío gratis en compras mayores a $XXX &nbsp;·&nbsp; Garantía de 2 años en todos los productos</span>
+  </div>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <a href="index.html">Incognito<span>Tech</span></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html/servicios.html">Servicios</a></li>
+      <li><a href="/productos.html">Productos</a></li>
+      <li><a href="index.html#ofertas">Ofertas</a></li>
+      <li><a href="/sobre_nosotros.html" class="nav-active">Nosotros</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="nav-icon-btn" aria-label="Carrito">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-badge">0</span>
+      </button>
+      <button class="nav-icon-btn" aria-label="Mi cuenta">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html/servicios.html">Servicios</a></li>
+      <li><a href="index.html/productos.html">Productos</a></li>
+      <li><a href="index.html#ofertas">Ofertas</a></li>
+      <li><a href="sobre_nosotros.html">Nosotros</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       1. ENCABEZADO DE PÁGINA
+  ════════════════════════════════════════ -->
+  <section class="sn-header">
+    <!-- Número editorial de fondo -->
+    <div class="sn-bg-num" aria-hidden="true"></div>
+
+    <div class="sn-header-content">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Ruta">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <span>Sobre nosotros</span>
+      </nav>
+
+      <p class="section-tag">// Quiénes somos</p>
+      <h1 class="sn-page-title">
+        Tecnología con<br/>
+        <em>propósito</em>
+      </h1>
+      <p class="sn-page-sub">Queremos que esté en la jugada con lo último que va saliendo en tecnología, pa' que no se quede atrás.<br/>
+      </p>
+    </div>
+
+    <!-- Imagen de cabecera — wide -->
+    <div class="sn-header-img">
+      <!-- EDITA: <img src="img/equipo-portada.jpg" alt="Equipo IncognitoTech"> -->
+      <div class="img-placeholder sn-ph-wide">
+        <img src="/img/habitacion.png" alt="">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       2. NUESTRA HISTORIA
+  ════════════════════════════════════════ -->
+  <section class="sn-section sn-historia">
+    <div class="sn-split">
+
+      <div class="sn-split-text">
+        <p class="section-tag">// Nuestra historia</p>
+        <h2 class="sn-title">De dónde venimos<br/>y hacia dónde vamos</h2>
+
+        <!-- EDITA: párrafos de historia -->
+        <p>
+         IncognitoTech nació en el 2019, en un cuartico en Bello, entre tintos y trasnochos. La vuelta era sencilla: estábamos mamados de ver cómo a la gente le sacaban la plata con tecnología que no entendían. El problema era claro, parce: las empresas chiquitas andaban a ciegas con su seguridad, y los grandes les cobraban un ojo de la cara. Dijimos: 'esto no puede seguir así'. Y ahí, con más ganas que plata, prendimos motores.
+        </p>
+        <p>
+          Al principio fue duro, mijo. Los primeros clientes fueron dos parceros que nos creyeron el cuento. El primer hito bacano fue cuando le salvamos el pellejo a una panadería que casi quiebran por un hackeo. De ahí en adelante el voz a voz hizo lo suyo. Cuando menos pensamos, ya teníamos gente de Medellín, Bogotá y hasta unos loquitos en Cali diciendo 'vénganse pa' acá'. Ese fue el momento en que dijimos: 'uy, esto ya cogió forma, ya no hay pa' atrás'.
+        </p>
+        <p>
+          Hoy somos un combo de 30 tesos, puros pelaos de Medellín que le meten el alma. Ya le cuidamos la espalda a más de 200 empresas en todo el país y hasta nos han buscado de afuera. ¿Logros? Nos ganamos el respeto de la gente, que es lo más importante. ¿Pa' dónde vamos? Sencillo: queremos que en 3 años cualquier tienda, cualquier emprendimiento en Colombia, ande seguro sin tener que vender un riñón. Esa es la meta, y pa' allá vamos con toda.
+        </p>
+
+        <div class="sn-historia-meta">
+          <!-- EDITA: año de fundación y ciudad -->
+          <div class="meta-item">
+            <span class="meta-num">2026</span>
+            <span class="meta-label">Año de fundación</span>
+          </div>
+          <div class="meta-divider"></div>
+          <div class="meta-item">
+            <span class="meta-num">Ciudad</span>
+            <span class="meta-label">Bello, Antioquía</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sn-split-img">
+        <!-- EDITA: <img src="img/historia.jpg" alt="Historia IncognitoTech"> -->
+         <img src="/img/historia.png" alt="Historia IncognitoTech">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       3. MISIÓN · VISIÓN · VALORES
+  ════════════════════════════════════════ -->
+  <section class="sn-section sn-mvv">
+    <div class="section-header">
+      <p class="section-tag">// Lo que nos mueve</p>
+      <h2 class="section-title">Misión, visión<br/>y valores</h2>
+    </div>
+
+    <div class="mvv-grid">
+
+      <div class="mvv-card">
+        <div class="mvv-icon">
+          <!-- EDITA: puedes cambiar el SVG por otro ícono -->
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M12 8v4l3 3"/>
+          </svg>
+        </div>
+        <h3>Misión</h3>
+        <!-- EDITA -->
+        <p>En IncognitoTech camellamos pa' que a ningún parcero emprendedor le metan goles con la tecnología. La vuelta nuestra es simple: cuidarles la espalda a las empresas chiquitas y medianas pa' que anden seguras, sin enredos y sin que les toque empeñar hasta la moto. Hacemos que la ciberseguridad sea pan comido, pa' que ellos se dediquen a crecer, que de lo otro nos encargamos nosotros.</p>
+      </div>
+
+      <div class="mvv-card">
+        <div class="mvv-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3>Visión</h3>
+        <!-- EDITA -->
+        <p>Nos soñamos que en unos añitos, cuando alguien en Colombia piense en seguridad pa' su negocio, diga de una: 'llame a los de IncognitoTech'. Queremos ser el parche más teso de Latinoamérica, el que le ponga freno a los vivos. La idea es que cualquier tienda, cualquier emprendimiento, desde una panadería en Manrique hasta una startup en El Poblado, ande tranquilo y con la tecnología al pelo, sin sustos ni cuentos raros</p>
+      </div>
+
+      <div class="mvv-card">
+        <div class="mvv-icon">
+          <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3>Valores</h3>
+        <!-- EDITA: lista de valores -->
+        <ul class="valores-list">
+          <li>Honestidad</li>
+          <li>Reciprocidad</li>
+          <li>Integridad</li>
+          <li>Excelencia</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       4. ESTADÍSTICAS / NÚMEROS
+  ════════════════════════════════════════ -->
+  <section class="sn-stats-section">
+    <div class="sn-stats-glass">
+
+      <!-- EDITA: cambia los números y etiquetas -->
+      <div class="sn-stat">
+        <span class="sn-stat-num">+5,345</span>
+        <span class="sn-stat-label">Clientes satisfechos</span>
+      </div>
+      <div class="sn-stat-divider"></div>
+
+      <div class="sn-stat">
+        <span class="sn-stat-num">+12,789</span>
+        <span class="sn-stat-label">Productos disponibles</span>
+      </div>
+      <div class="sn-stat-divider"></div>
+
+      <div class="sn-stat">
+        <span class="sn-stat-num">4 meses</span>
+        <span class="sn-stat-label">En el mercado</span>
+      </div>
+      <div class="sn-stat-divider"></div>
+
+      <div class="sn-stat">
+        <span class="sn-stat-num">15</span>
+        <span class="sn-stat-label">Marcas oficiales</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       5. EL EQUIPO
+  ════════════════════════════════════════ -->
+  <section class="sn-section sn-equipo">
+    <div class="section-header">
+      <p class="section-tag">// Las personas</p>
+      <h2 class="section-title">Nuestro equipo</h2>
+      <p class="section-sub">La persona detrás de IncognitoTech</p>
+    </div>
+ 
+    <!-- Tarjeta de perfil expandida (para fundador / miembro único) -->
+    <div class="perfil-card">
+ 
+      <!-- ── COLUMNA IZQUIERDA: Foto + identidad ── -->
+      <div class="perfil-foto-col">
+        <div class="perfil-foto-wrap">
+          <!-- EDITA: tu foto -->
+          <img src="img/eve.JPG" alt="Evelio Restrepo"/>
+        </div>
+ 
+        <!-- Nombre y cargo debajo de la foto -->
+        <div class="perfil-id">
+          <h3 class="perfil-nombre">Evelio Restrepo</h3>
+          <!-- EDITA -->
+          <span class="perfil-cargo">Fundador · Desarrollador web</span>
+        </div>
+ 
+        <!-- Links sociales verticales -->
+        <div class="perfil-socials">
+          <!-- EDITA: reemplaza # con tus enlaces -->
+          <a href="#" class="perfil-social-link">
+            <span class="ps-label">LinkedIn</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+          </a>
+          <a href="#" class="perfil-social-link">
+            <span class="ps-label">GitHub</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+            </svg>
+          </a>
+          <a href="#" class="perfil-social-link">
+            <span class="ps-label">Instagram</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+ 
+      <!-- ── COLUMNA DERECHA: Panel de info ── -->
+      <div class="perfil-panel">
+ 
+        <!-- Cita o frase -->
+        <div class="perfil-quote">
+          <!-- EDITA: tu frase o filosofía -->
+          <span class="perfil-quote-mark">"</span>
+          <p>La tecnología bien usada cambia vidas. Construyo herramientas que le dan poder a las personas, no al revés.</p>
+        </div>
+ 
+        <!-- Estadísticas personales -->
+        <div class="perfil-stats">
+          <!-- EDITA: tus números -->
+          <div class="perfil-stat">
+            <span class="perfil-stat-n">+20</span>
+            <span class="perfil-stat-l">Proyectos</span>
+          </div>
+          <div class="perfil-stat-sep"></div>
+          <div class="perfil-stat">
+            <span class="perfil-stat-n">4+</span>
+            <span class="perfil-stat-l">Años de experiencia</span>
+          </div>
+          <div class="perfil-stat-sep"></div>
+          <div class="perfil-stat">
+            <span class="perfil-stat-n">2019</span>
+            <span class="perfil-stat-l">Inicio en el código</span>
+          </div>
+        </div>
+ 
+        <!-- Habilidades con barra CSS -->
+        <div class="perfil-skills">
+          <h4 class="perfil-section-label">Habilidades</h4>
+ 
+          <!-- EDITA: nombre y porcentaje (--w: XX%) de cada skill -->
+          <div class="skill-row">
+            <span class="skill-name">Desarrollo web</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 90%"></div>
+            </div>
+            <span class="skill-pct">90%</span>
+          </div>
+ 
+          <div class="skill-row">
+            <span class="skill-name">Diseño UI / UX</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 75%"></div>
+            </div>
+            <span class="skill-pct">75%</span>
+          </div>
+ 
+          <div class="skill-row">
+            <span class="skill-name">Testing web</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 80%"></div>
+            </div>
+            <span class="skill-pct">80%</span>
+          </div>
+ 
+          <div class="skill-row">
+            <span class="skill-name">Soporte técnico</span>
+            <div class="skill-bar">
+              <div class="skill-fill" style="--w: 95%"></div>
+            </div>
+            <span class="skill-pct">95%</span>
+          </div>
+ 
+        </div>
+ 
+        <!-- Stack tecnológico -->
+        <div class="perfil-stack">
+          <h4 class="perfil-section-label">Stack & herramientas</h4>
+          <div class="stack-tags">
+            <!-- EDITA: añade o quita tecnologías -->
+            <span class="stack-tag">HTML</span>
+            <span class="stack-tag">CSS</span>
+            <span class="stack-tag">JavaScript</span>
+            <span class="stack-tag">Git</span>
+            <span class="stack-tag">Figma</span>
+            <span class="stack-tag">VS Code</span>
+            <span class="stack-tag">Node.js</span>
+            <span class="stack-tag">React</span>
+          </div>
+        </div>
+ 
+        <!-- Intereses / pasiones -->
+        <div class="perfil-intereses">
+          <h4 class="perfil-section-label">Intereses</h4>
+          <div class="intereses-row">
+            <!-- EDITA -->
+            <div class="interes-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+              </svg>
+              <span>Open source</span>
+            </div>
+            <div class="interes-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+              <span>Tecnología</span>
+            </div>
+            <div class="interes-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+              <span>Diseño</span>
+            </div>
+            <div class="interes-item">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4m0-6h10m0 0v4a2 2 0 0 1-2 2h-8"/>
+              </svg>
+              <span>Emprendimiento</span>
+            </div>
+          </div>
+        </div>
+ 
+      </div><!-- /perfil-panel -->
+    </div><!-- /perfil-card -->
+ 
+    <!-- ── Si tienes más miembros, agrégalos así (tarjeta compacta normal): ── -->
+    <!--
+    <div class="equipo-grid-extra">
+      <article class="miembro-card">
+        ...
+      </article>
+    </div>
+    -->
+ 
+  </section>
+  <!-- ═══════════════════════════════════════
+       6. CTA FINAL
+  ════════════════════════════════════════ -->
+  <section class="sn-cta">
+    <div class="sn-cta-glass">
+      <p class="section-tag">// Únete</p>
+      <!-- EDITA -->
+      <h2>¿Listo para explorar<br/>lo mejor en tecnología?</h2>
+      <p>Visita nuestro catálogo y encuentra el equipo que estás buscando. Productos originales, garantía real y atención personalizada.</p>
+      <div class="sn-cta-btns">
+        <a href="index.html/productos.html" class="btn-primary">Ver catálogo</a>
+        <a href="index.html#contacto" class="btn-ghost">Contáctanos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo">Incognito<span>Tech</span></div>
+        <p>Tu tienda de tecnología de confianza. Productos originales, garantía real y envío rápido.</p>
+        <div class="socials">
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="TikTok">TK</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+          <a href="#" class="social-link" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Tienda</h4>
+          <a href="#">Computadores</a>
+          <a href="#">Smartphones</a>
+          <a href="#">Gaming</a>
+          <a href="#">Audio</a>
+          <a href="#">Monitores</a>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="sobre_nosotros.html">Sobre nosotros</a>
+          <a href="#">Blog</a>
+          <a href="#">Trabaja con nosotros</a>
+          <a href="#">Prensa</a>
+        </div>
+        <div class="footer-col">
+          <h4>Soporte</h4>
+          <a href="#">Centro de ayuda</a>
+          <a href="#">Devoluciones</a>
+          <a href="#">Garantías</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 IncognitoTech. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* Navbar scroll */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* Hamburger */
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+    }));
+  </script>
+</body>
+</html>

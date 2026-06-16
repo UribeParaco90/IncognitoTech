@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>IncognitoTech</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Syne: títulos editoriales modernos | Outfit: textos limpios y legibles -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════
+       BARRA SUPERIOR — Anuncio / Promoción
+  ════════════════════════════════════════ -->
+  <div class="topbar">
+    <!-- EDITA: mensaje de anuncio o promoción -->
+    <span> Envío gratis en compras mayores a $XXX &nbsp;·&nbsp; Garantía de 2 años en todos los productos</span>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       NAVBAR
+  ════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <!-- EDITA: puedes reemplazar esto con un <img src="logo.svg"> -->
+      Incognito<span>Tech</span>
+    </div>
+
+    <ul class="nav-links">
+      <!-- EDITA: links de navegación -->
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="/servicios.html">Servicios</a></li>
+      <li><a href="/productos.html">Productos</a></li>
+      <li><a href="#ofertas">Ofertas</a></li>
+      <li><a href="/sobre_nosotros.html">Nosotros</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <!-- Barra de búsqueda compacta en navbar -->
+      <div class="nav-search" id="navSearchWrap">
+        <button class="search-toggle" id="searchToggle" aria-label="Buscar">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <div class="nav-search-expand" id="navSearchExpand">
+          <input type="text" id="navSearchInput" placeholder="Buscar productos…" autocomplete="off"/>
+          <div class="nav-search-results" id="navSearchResults"></div>
+        </div>
+      </div>
+
+      <!-- Carrito -->
+      <button class="nav-icon-btn" aria-label="Carrito">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+        </svg>
+        <span class="cart-badge">0</span>
+      </button>
+
+      <!-- Usuario -->
+      <button class="nav-icon-btn" aria-label="Mi cuenta">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+          <circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+
+      <!-- Hamburger mobile -->
+      <button class="hamburger" id="hamburger" aria-label="Menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="#hero">Inicio</a></li>
+      <li><a href="/servicios.html">Servicios</a></li>
+      <li><a href="/productos.html">Productos</a></li>
+      <li><a href="#ofertas">Ofertas</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       HERO — Sección principal
+  ════════════════════════════════════════ -->
+  <section class="hero" id="hero">
+
+    <div class="hero-content">
+      <!-- EDITA: etiqueta pequeña encima del título -->
+      <p class="hero-tag">Nueva colección · 2026</p>
+
+      <!-- EDITA: título principal (2-4 palabras impactantes) -->
+      <h1 class="hero-title">
+        TECNOLOGÍA<br/>
+        <em>SIN LÍMITES</em>
+      </h1>
+
+      <!-- EDITA: subtítulo o descripción corta -->
+      <p class="hero-subtitle"> Vendemos tecnología de vanguardia para tu día a día</p>
+
+      <!-- Barra de búsqueda HERO — visible y prominente -->
+      <div class="hero-search-wrap">
+        <div class="hero-search-bar">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+          <input type="text" id="heroSearchInput" placeholder="¿Qué estás buscando? Ej: iPhone, laptop, GPU…" autocomplete="off"/>
+          <button class="hero-search-btn">Buscar</button>
+        </div>
+      </div>
+
+      <!-- CTA buttons -->
+      <div class="hero-cta">
+        <a href="/productos.html" class="btn-primary">Ver catálogo</a>
+        <a href="#ofertas" class="btn-ghost">Ofertas del día →</a>
+      </div>
+    </div>
+
+
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       Servicios
+  ════════════════════════════════════════ -->
+  <section class="section categorias" id="categorias">
+    <div class="section-header">
+      <!-- EDITA -->
+      <p class="section-tag">// Explorar</p>
+      <h2 class="section-title">Servicios</h2>
+      <p class="section-sub">Encuentra lo que necesitas</p>
+    </div>
+
+    <div class="cat-grid">
+
+      <!-- ── CATEGORÍA 1 (grande) ── -->
+      <article class="cat-card cat-lg reveal">
+        <div class="cat-body">
+          <h3>Computadores</h3>
+          <p>Laptops, desktops y workstations</p>
+          <span class="cat-link">Ver todo →</span>
+        </div>
+      </article>
+
+      <!-- ── CATEGORÍA 2 ── -->
+      <article class="cat-card reveal">
+        <div class="cat-body">
+          <h3>Smartphones</h3>
+          <p>Los últimos modelos con 5G</p>
+          <span class="cat-link">Ver todo →</span>
+        </div>
+      </article>
+
+      <!-- ── CATEGORÍA 3 ── -->
+      <article class="cat-card reveal">
+        <div class="cat-body">
+          <h3>Audio</h3>
+          <p>Auriculares y sistemas de sonido</p>
+          <span class="cat-link">Ver todo →</span>
+        </div>
+      </article>
+
+      <!-- ── CATEGORÍA 4 ── -->
+      <article class="cat-card reveal">
+        <div class="cat-body">
+          <h3>Gaming</h3>
+          <p>Periféricos y consolas</p>
+          <span class="cat-link">Ver todo →</span>
+        </div>
+      </article>
+
+      <!-- ── CATEGORÍA 5 ── -->
+      <article class="cat-card reveal">
+        <div class="cat-body">
+          <h3>Monitores</h3>
+          <p>4K, OLED y alta frecuencia</p>
+          <span class="cat-link">Ver todo →</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       PRODUCTOS DESTACADOS
+  ════════════════════════════════════════ -->
+  <section class="section productos" id="productos">
+    <div class="section-header">
+      <p class="section-tag">// Top sellers</p>
+      <h2 class="section-title">Productos destacados</h2>
+      <p class="section-sub">Los más vendidos del mes</p>
+    </div>
+
+    <!-- Filtros de productos -->
+    <div class="prod-filters">
+      <div class="prod-search">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="prodFilterInput" placeholder="Filtrar productos…"/>
+      </div>
+      <div class="filter-chips">
+        <button class="chip active" data-cat="all">Todos</button>
+        <!-- EDITA: añade o quita chips según tus Servicios -->
+        <button class="chip" data-cat="laptop">Laptops</button>
+        <button class="chip" data-cat="phone">Teléfonos</button>
+        <button class="chip" data-cat="gpu">GPU</button>
+        <button class="chip" data-cat="audio">Audio</button>
+        <button class="chip" data-cat="gaming">Gaming</button>
+      </div>
+    </div>
+
+    <div class="prod-grid" id="prodGrid">
+
+      <!-- ══ PRODUCTO 1 ══
+           data-cat="laptop|phone|gpu|audio|gaming" (para el filtro)
+           EDITA: badge, imagen, marca, nombre, specs, precio -->
+      <article class="prod-card reveal" data-cat="laptop">
+        <div class="prod-badge">NUEVO</div>
+        <div class="prod-img-slot">
+          <img src="/img/SamsungGalaxyS26.jpg" alt="Samsung Galaxy S26 ULTRA" class="prod-img"/>
+          <div class="prod-hover-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="prod-info">
+          <span class="prod-brand">Samsung</span>
+          <h3 class="prod-name">Samsung Galaxy S26 ULTRA</h3>
+          <p class="prod-spec">Memoria RAM: 16 GB. Almacenamiento:1 TB.</p>
+          <div class="prod-footer">
+            <div class="prod-price">
+              <span class="price-old">$7.500.000</span>
+              <span class="price">$5.350.000</span>
+            </div>
+            <button class="btn-add-cart" aria-label="Agregar al carrito">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PRODUCTO 2 ══ -->
+      <article class="prod-card reveal" data-cat="phone">
+        <div class="prod-badge hot">HOT</div>
+        <div class="prod-img-slot">
+          <img src="/img/rtx5090.jpeg" alt="Nombre del Producto" class="prod-img"/>
+          <div class="prod-hover-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="prod-info">
+          <span class="prod-brand">NVIDIA</span>
+          <h3 class="prod-name">RTX 5090</h3>
+          <p class="prod-spec">2084 GHz</p>
+          <div class="prod-footer">
+            <div class="prod-price">
+              <span class="price-old">$11.000.000</span>
+              <span class="price">$9.000.000</span>
+            </div>
+            <button class="btn-add-cart" aria-label="Agregar al carrito">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PRODUCTO 3 ══ -->
+      <article class="prod-card reveal" data-cat="gpu">
+        <div class="prod-badge sale">-20%</div>
+        <div class="prod-img-slot">
+          <img src="/img/monitorsamsung.jpg" alt="Nombre del Producto" class="prod-img"/>
+          <div class="prod-hover-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="prod-info">
+          <span class="prod-brand">Samsung</span>
+          <h3 class="prod-name">Monitos Curvo</h3>
+          <p class="prod-spec">27 pulgadas, 100hz</p>
+          <div class="prod-footer">
+            <div class="prod-price">
+              <span class="price-old">$0,000</span>
+              <span class="price">$0,000</span>
+            </div>
+            <button class="btn-add-cart" aria-label="Agregar al carrito">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- ══ PRODUCTO 4 ══ -->
+      <article class="prod-card reveal" data-cat="audio">
+        <div class="prod-img-slot">
+          <img src="/img/silla.jpg" alt="Nombre del Producto" class="prod-img"/>
+          <div class="prod-hover-overlay">
+            <button class="btn-quick-view">Vista rápida</button>
+          </div>
+        </div>
+        <div class="prod-info">
+          <span class="prod-brand">Razer</span>
+          <h3 class="prod-name">Silla Gaming</h3>
+          <p class="prod-spec">Ergonimica, 12% reciclable</p>
+          <div class="prod-footer">
+            <div class="prod-price">
+              <span class="price">$900.000</span>
+            </div>
+            <button class="btn-add-cart" aria-label="Agregar al carrito">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- DUPLICA UN prod-card para agregar más productos -->
+
+    </div>
+
+    <div class="section-cta">
+      <a href="#" class="btn-outline">Ver todos los productos</a>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BANNER OFERTA ESPECIAL
+  ════════════════════════════════════════ -->
+  <section class="oferta-banner" id="ofertas">
+    <div class="oferta-glass">
+      <div class="oferta-text">
+        <!-- EDITA -->
+        <p class="section-tag">// Tiempo limitado</p>
+        <h2>HASTA <span class="accent">40% OFF</span><br/>EN GAMING</h2>
+        <p>Texto de apoyo para la oferta. Una o dos líneas explicando la promoción y cómo aprovecharla.</p>
+
+        <!-- COUNTDOWN — los números los actualiza el JS -->
+        <div class="countdown">
+          <div class="cd-unit"><span class="cd-num" id="cd-h">23</span><span class="cd-label">Horas</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-unit"><span class="cd-num" id="cd-m">59</span><span class="cd-label">Min</span></div>
+          <span class="cd-sep">:</span>
+          <div class="cd-unit"><span class="cd-num" id="cd-s">59</span><span class="cd-label">Seg</span></div>
+        </div>
+
+        <a href="#" class="btn-primary">Aprovechar oferta</a>
+      </div>
+
+      <div class="oferta-img-slot">
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       MARCAS / PARTNERS
+  ════════════════════════════════════════ -->
+  <section class="section marcas">
+    <div class="section-header">
+      <p class="section-tag">// Partners</p>
+      <h2 class="section-title">Marcas oficiales</h2>
+    </div>
+    <div class="brands-row">
+      <!-- EDITA: nombre de marcas o reemplaza con <img src="logo.svg"> -->
+      <div class="brand-item">APPLE</div>
+      <div class="brand-item">SAMSUNG</div>
+      <div class="brand-item">NVIDIA</div>
+      <div class="brand-item">INTEL</div>
+      <div class="brand-item">SONY</div>
+      <div class="brand-item">ASUS</div>
+      <div class="brand-item">LENOVO</div>
+      <div class="brand-item">AMD</div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       NEWSLETTER / CONTACTO
+  ════════════════════════════════════════ -->
+  <section class="section newsletter" id="contacto">
+    <div class="nl-glass reveal">
+      <div class="nl-content">
+        <!-- EDITA -->
+        <p class="section-tag">// Mantente conectado</p>
+        <h2 class="section-title">Suscríbete y obtén<br/><span class="accent">10% de descuento</span></h2>
+        <p>Recibe lanzamientos, ofertas exclusivas y novedades antes que nadie.</p>
+        <div class="nl-form">
+          <input type="email" placeholder="tucorreo@ejemplo.com" class="nl-input"/>
+          <button class="btn-primary">Suscribirme</button>
+        </div>
+        <p class="nl-fine">Sin spam. Cancela cuando quieras.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <div class="footer-brand">
+        <div class="nav-logo footer-logo">Incognito<span>Tech</span></div>
+        <!-- EDITA: descripción corta de la empresa -->
+        <p>Tu tienda de tecnología de confianza. Productos originales, garantía real y envío rápido.</p>
+        <div class="socials">
+          <!-- EDITA: reemplaza # con tus links -->
+          <a href="#" class="social-link" aria-label="Instagram">IG</a>
+          <a href="#" class="social-link" aria-label="TikTok">TK</a>
+          <a href="#" class="social-link" aria-label="YouTube">YT</a>
+          <a href="#" class="social-link" aria-label="Twitter/X">X</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Tienda</h4>
+          <!-- EDITA -->
+          <a href="#">Computadores</a>
+          <a href="#">Smartphones</a>
+          <a href="#">Gaming</a>
+          <a href="#">Audio</a>
+          <a href="#">Monitores</a>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <a href="#">Sobre nosotros</a>
+          <a href="#">Blog</a>
+          <a href="#">Trabaja con nosotros</a>
+          <a href="#">Prensa</a>
+        </div>
+        <div class="footer-col">
+          <h4>Soporte</h4>
+          <a href="#">Centro de ayuda</a>
+          <a href="#">Devoluciones</a>
+          <a href="#">Garantías</a>
+          <a href="#">Contacto</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <!-- EDITA: año y nombre legal -->
+      <span>© 2026 IncognitoTech. Todos los derechos reservados.</span>
+      <div class="footer-legal">
+        <a href="#">Privacidad</a>
+        <a href="#">Términos</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
