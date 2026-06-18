@@ -25,16 +25,14 @@
   ════════════════════════════════════════ -->
   <nav class="navbar" id="navbar">
     <div class="nav-logo">
-      <!-- EDITA: puedes reemplazar esto con un <img src="logo.svg"> -->
+      <img src="" alt=""> <!-- para el logo-->
       Incognito<span>Tech</span>
     </div>
 
     <ul class="nav-links">
-      <!-- EDITA: links de navegación -->
       <li><a href="#hero">Inicio</a></li>
       <li><a href="/servicios.html">Servicios</a></li>
       <li><a href="/productos.html">Productos</a></li>
-      <li><a href="#ofertas">Ofertas</a></li>
       <li><a href="/sobre_nosotros.html">Nosotros</a></li>
     </ul>
 
@@ -87,22 +85,17 @@
     </ul>
   </div>
 
-  <!-- ═══════════════════════════════════════
-       HERO — Sección principal
-  ════════════════════════════════════════ -->
+  <!-- HERO — Sección principal -->
   <section class="hero" id="hero">
 
     <div class="hero-content">
-      <!-- EDITA: etiqueta pequeña encima del título -->
       <p class="hero-tag">Nueva colección · 2026</p>
 
-      <!-- EDITA: título principal (2-4 palabras impactantes) -->
       <h1 class="hero-title">
         TECNOLOGÍA<br/>
         <em>SIN LÍMITES</em>
       </h1>
 
-      <!-- EDITA: subtítulo o descripción corta -->
       <p class="hero-subtitle"> Vendemos tecnología de vanguardia para tu día a día</p>
 
       <!-- Barra de búsqueda HERO — visible y prominente -->
@@ -126,12 +119,9 @@
 
   </section>
 
-  <!-- ═══════════════════════════════════════
-       Servicios
-  ════════════════════════════════════════ -->
+  <!-- Servicios -->
   <section class="section categorias" id="categorias">
     <div class="section-header">
-      <!-- EDITA -->
       <p class="section-tag">// Explorar</p>
       <h2 class="section-title">Servicios</h2>
       <p class="section-sub">Encuentra lo que necesitas</p>
@@ -187,9 +177,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       PRODUCTOS DESTACADOS
-  ════════════════════════════════════════ -->
+  <!-- PRODUCTOS DESTACADOS-->
   <section class="section productos" id="productos">
     <div class="section-header">
       <p class="section-tag">// Top sellers</p>
@@ -207,7 +195,6 @@
       </div>
       <div class="filter-chips">
         <button class="chip active" data-cat="all">Todos</button>
-        <!-- EDITA: añade o quita chips según tus Servicios -->
         <button class="chip" data-cat="laptop">Laptops</button>
         <button class="chip" data-cat="phone">Teléfonos</button>
         <button class="chip" data-cat="gpu">GPU</button>
@@ -218,13 +205,11 @@
 
     <div class="prod-grid" id="prodGrid">
 
-      <!-- ══ PRODUCTO 1 ══
-           data-cat="laptop|phone|gpu|audio|gaming" (para el filtro)
-           EDITA: badge, imagen, marca, nombre, specs, precio -->
+      <!-- ══ PRODUCTO 1  -->
       <article class="prod-card reveal" data-cat="laptop">
         <div class="prod-badge">NUEVO</div>
         <div class="prod-img-slot">
-          <img src="/img/SamsungGalaxyS26.jpg" alt="Samsung Galaxy S26 ULTRA" class="prod-img"/>
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1781789675/SamsungGalaxyS26_kyj7ll.webp" alt="Samsung Galaxy S26 ULTRA" class="prod-img"/>
           <div class="prod-hover-overlay">
             <button class="btn-quick-view">Vista rápida</button>
           </div>
@@ -252,7 +237,7 @@
       <article class="prod-card reveal" data-cat="phone">
         <div class="prod-badge hot">HOT</div>
         <div class="prod-img-slot">
-          <img src="/img/rtx5090.jpeg" alt="Nombre del Producto" class="prod-img"/>
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1781789669/rtx5090_qbj75y.jpg" alt="Nombre del Producto" class="prod-img"/>
           <div class="prod-hover-overlay">
             <button class="btn-quick-view">Vista rápida</button>
           </div>
@@ -280,7 +265,7 @@
       <article class="prod-card reveal" data-cat="gpu">
         <div class="prod-badge sale">-20%</div>
         <div class="prod-img-slot">
-          <img src="/img/monitorsamsung.jpg" alt="Nombre del Producto" class="prod-img"/>
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1781789668/monitorsamsung_dsgh3i.webp" alt="Nombre del Producto" class="prod-img"/>
           <div class="prod-hover-overlay">
             <button class="btn-quick-view">Vista rápida</button>
           </div>
@@ -291,8 +276,8 @@
           <p class="prod-spec">27 pulgadas, 100hz</p>
           <div class="prod-footer">
             <div class="prod-price">
-              <span class="price-old">$0,000</span>
-              <span class="price">$0,000</span>
+              <span class="price-old">$3.000.000</span>
+              <span class="price">$2.400.000</span>
             </div>
             <button class="btn-add-cart" aria-label="Agregar al carrito">
               <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -307,7 +292,7 @@
       <!-- ══ PRODUCTO 4 ══ -->
       <article class="prod-card reveal" data-cat="audio">
         <div class="prod-img-slot">
-          <img src="/img/silla.jpg" alt="Nombre del Producto" class="prod-img"/>
+          <img src="https://res.cloudinary.com/dsbuubv6e/image/upload/v1781789672/silla_sb7uka.webp" alt="Nombre del Producto" class="prod-img"/>
           <div class="prod-hover-overlay">
             <button class="btn-quick-view">Vista rápida</button>
           </div>
@@ -339,9 +324,7 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       BANNER OFERTA ESPECIAL
-  ════════════════════════════════════════ -->
+  <!-- BANNER OFERTA ESPECIAL-->
   <section class="oferta-banner" id="ofertas">
     <div class="oferta-glass">
       <div class="oferta-text">
@@ -367,16 +350,13 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       MARCAS / PARTNERS
-  ════════════════════════════════════════ -->
-  <section class="section marcas">
+  <!-- MARCAS / PARTNERS -->
+  <section class="section marcas"> 
     <div class="section-header">
       <p class="section-tag">// Partners</p>
       <h2 class="section-title">Marcas oficiales</h2>
     </div>
     <div class="brands-row">
-      <!-- EDITA: nombre de marcas o reemplaza con <img src="logo.svg"> -->
       <div class="brand-item">APPLE</div>
       <div class="brand-item">SAMSUNG</div>
       <div class="brand-item">NVIDIA</div>
@@ -388,13 +368,10 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       NEWSLETTER / CONTACTO
-  ════════════════════════════════════════ -->
+  <!-- NEWSLETTER / CONTACTO -->
   <section class="section newsletter" id="contacto">
     <div class="nl-glass reveal">
       <div class="nl-content">
-        <!-- EDITA -->
         <p class="section-tag">// Mantente conectado</p>
         <h2 class="section-title">Suscríbete y obtén<br/><span class="accent">10% de descuento</span></h2>
         <p>Recibe lanzamientos, ofertas exclusivas y novedades antes que nadie.</p>
@@ -407,18 +384,14 @@
     </div>
   </section>
 
-  <!-- ═══════════════════════════════════════
-       FOOTER
-  ════════════════════════════════════════ -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="footer-top">
 
       <div class="footer-brand">
         <div class="nav-logo footer-logo">Incognito<span>Tech</span></div>
-        <!-- EDITA: descripción corta de la empresa -->
         <p>Tu tienda de tecnología de confianza. Productos originales, garantía real y envío rápido.</p>
         <div class="socials">
-          <!-- EDITA: reemplaza # con tus links -->
           <a href="#" class="social-link" aria-label="Instagram">IG</a>
           <a href="#" class="social-link" aria-label="TikTok">TK</a>
           <a href="#" class="social-link" aria-label="YouTube">YT</a>
@@ -429,7 +402,6 @@
       <div class="footer-links">
         <div class="footer-col">
           <h4>Tienda</h4>
-          <!-- EDITA -->
           <a href="#">Computadores</a>
           <a href="#">Smartphones</a>
           <a href="#">Gaming</a>
@@ -455,7 +427,6 @@
     </div>
 
     <div class="footer-bottom">
-      <!-- EDITA: año y nombre legal -->
       <span>© 2026 IncognitoTech. Todos los derechos reservados.</span>
       <div class="footer-legal">
         <a href="#">Privacidad</a>
