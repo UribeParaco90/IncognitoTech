@@ -15,7 +15,7 @@
        BARRA SUPERIOR — Anuncio / Promoción
   ════════════════════════════════════════ -->
   <div class="topbar">
-    <span> Envío gratis en compras mayores a $XXX &nbsp;·&nbsp; Garantía de 2 años en todos los productos</span>
+    <span>Envío gratis en compras mayores a $50.000 &nbsp;·&nbsp; Garantía de 2 años en todos los productos</span>
   </div>
 
   <!-- ═══════════════════════════════════════
@@ -28,7 +28,7 @@
     </div>
 
     <ul class="nav-links">
-      <li><a href="#hero">Inicio</a></li>
+      <li><a href="#hero" class="nav-active">Inicio</a></li>
       <li><a href="servicios.html">Servicios</a></li>
       <li><a href="productos.html">Productos</a></li>
       <li><a href="sobre_nosotros.html">Nosotros</a></li>
@@ -72,12 +72,22 @@
     </div>
   </nav>
 
+  <!-- Overlay oscuro detrás del panel mobile -->
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
   <!-- Mobile Menu -->
   <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Cerrar menú">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 6 6 18M6 6l12 12"/>
+      </svg>
+    </button>
     <ul>
-      <li><a href="#hero">Inicio</a></li>
-      <li><a href="/servicios.html">Servicios</a></li>
-      <li><a href="/productos.html">Productos</a></li>
+      <li><a href="#hero" class="nav-active">Inicio</a></li>
+      <li><a href="servicios.html">Servicios</a></li>
+      <li><a href="productos.html">Productos</a></li>
+      <li><a href="#ofertas">Ofertas</a></li>
+      <li><a href="sobre_nosotros.html">Nosotros</a></li>
       <li><a href="#contacto">Contacto</a></li>
     </ul>
   </div>
@@ -93,7 +103,7 @@
         <em>SIN LÍMITES</em>
       </h1>
 
-      <p class="hero-subtitle"> Vendemos tecnología de vanguardia para tu día a día</p>
+      <p class="hero-subtitle">Vendemos tecnología de vanguardia para tu día a día</p>
 
       <!-- Barra de búsqueda HERO — visible y prominente -->
       <div class="hero-search-wrap">
@@ -108,11 +118,10 @@
 
       <!-- CTA buttons -->
       <div class="hero-cta">
-        <a href="/productos.html" class="btn-primary">Ver catálogo</a>
+        <a href="productos.html" class="btn-primary">Ver catálogo</a>
         <a href="#ofertas" class="btn-ghost">Ofertas del día →</a>
       </div>
     </div>
-
 
   </section>
 
@@ -328,7 +337,7 @@
         <!-- EDITA -->
         <p class="section-tag">// Tiempo limitado</p>
         <h2>HASTA <span class="accent">40% OFF</span><br/>EN GAMING</h2>
-        <p>Texto de apoyo para la oferta. Una o dos líneas explicando la promoción y cómo aprovecharla.</p>
+        <p>Parce, no te pierdas nuestros descuentos, para que tengas lo ultimo en tecnología.</p>
 
         <!-- COUNTDOWN — los números los actualiza el JS -->
         <div class="countdown">
@@ -432,5 +441,150 @@
       </div>
     </div>
   </footer>
+
+  <!-- ═══════════════════════════════════════
+       JAVASCRIPT
+  ════════════════════════════════════════ -->
+  <script>
+    /* ── Navbar scroll ── */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ── Hamburger / Panel lateral mobile ── */
+    const hamburger      = document.getElementById('hamburger');
+    const mobileMenu      = document.getElementById('mobileMenu');
+    const mobileOverlay   = document.getElementById('mobileOverlay');
+    const mobileMenuClose = document.getElementById('mobileMenuClose');
+
+    function openMobileMenu() {
+      hamburger.classList.add('open');
+      mobileMenu.classList.add('open');
+      mobileOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileMenu() {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      mobileOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', () => {
+      mobileMenu.classList.contains('open') ? closeMobileMenu() : openMobileMenu();
+    });
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMobileMenu));
+
+    /* ── Búsqueda navbar (toggle) ── */
+    const searchToggle    = document.getElementById('searchToggle');
+    const navSearchExpand = document.getElementById('navSearchExpand');
+    searchToggle.addEventListener('click', () => {
+      navSearchExpand.classList.toggle('open');
+      if (navSearchExpand.classList.contains('open')) {
+        document.getElementById('navSearchInput').focus();
+      }
+    });
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('#navSearchWrap')) {
+        navSearchExpand.classList.remove('open');
+      }
+    });
+
+    /* ── Búsqueda Hero ──
+       EDITA: reemplaza este array con tus productos reales */
+    const PRODUCTS = [
+      { name: 'Samsung Galaxy S26 ULTRA', cat: 'Smartphone', price: '$5.350.000' },
+      { name: 'RTX 5090', cat: 'GPU', price: '$9.000.000' },
+      { name: 'Monitor Curvo Samsung', cat: 'Monitor', price: '$2.400.000' },
+      { name: 'Silla Gaming Razer', cat: 'Gaming', price: '$900.000' },
+    ];
+
+    const heroSearchInput = document.getElementById('heroSearchInput');
+    const navSearchInput  = document.getElementById('navSearchInput');
+    const navSearchResults = document.getElementById('navSearchResults');
+
+    function renderResults(query, container) {
+      const q = query.toLowerCase().trim();
+      container.innerHTML = '';
+      if (!q) return;
+      const matches = PRODUCTS.filter(p => p.name.toLowerCase().includes(q));
+      matches.forEach(p => {
+        const item = document.createElement('div');
+        item.className = 'search-result-item';
+        item.innerHTML = `<span>${p.name}</span><strong>${p.price}</strong>`;
+        container.appendChild(item);
+      });
+    }
+
+    if (navSearchInput) {
+      navSearchInput.addEventListener('input', () => renderResults(navSearchInput.value, navSearchResults));
+    }
+
+    /* ── Filtro de productos (chips) ── */
+    const chips     = document.querySelectorAll('.chip');
+    const prodCards = document.querySelectorAll('.prod-card');
+    chips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        chips.forEach(c => c.classList.remove('active'));
+        chip.classList.add('active');
+        const cat = chip.dataset.cat;
+        prodCards.forEach(card => {
+          const show = cat === 'all' || card.dataset.cat === cat;
+          card.style.opacity = show ? '1' : '0.25';
+          card.style.pointerEvents = show ? '' : 'none';
+        });
+      });
+    });
+
+    /* ── Filtro de productos (búsqueda) ── */
+    const prodFilterInput = document.getElementById('prodFilterInput');
+    if (prodFilterInput) {
+      prodFilterInput.addEventListener('input', () => {
+        const q = prodFilterInput.value.toLowerCase();
+        prodCards.forEach(card => {
+          const name  = card.querySelector('.prod-name')?.textContent.toLowerCase() || '';
+          const brand = card.querySelector('.prod-brand')?.textContent.toLowerCase() || '';
+          card.style.opacity = (name + brand).includes(q) ? '1' : '0.2';
+        });
+      });
+    }
+
+    /* ── Carrito: feedback visual ── */
+    document.querySelectorAll('.btn-add-cart').forEach(btn => {
+      btn.addEventListener('click', function () {
+        const badge = document.querySelector('.cart-badge');
+        if (badge) badge.textContent = parseInt(badge.textContent || 0) + 1;
+        const originalHTML = this.innerHTML;
+        this.classList.add('added');
+        this.textContent = '✓';
+        setTimeout(() => {
+          this.classList.remove('added');
+          this.innerHTML = originalHTML;
+        }, 1400);
+      });
+    });
+
+    /* ── Countdown oferta ── */
+    function updateCountdown() {
+      const h = document.getElementById('cd-h');
+      const m = document.getElementById('cd-m');
+      const s = document.getElementById('cd-s');
+      if (!h || !m || !s) return;
+      let sec = parseInt(s.textContent);
+      let min = parseInt(m.textContent);
+      let hrs = parseInt(h.textContent);
+      sec--;
+      if (sec < 0) { sec = 59; min--; }
+      if (min < 0) { min = 59; hrs--; }
+      if (hrs < 0)   hrs = 23;
+      s.textContent = String(sec).padStart(2, '0');
+      m.textContent = String(min).padStart(2, '0');
+      h.textContent = String(hrs).padStart(2, '0');
+    }
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
